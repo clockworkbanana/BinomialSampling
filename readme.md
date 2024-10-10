@@ -3,28 +3,28 @@
 ## Problem
 
 We have two datasets (tables).
-One is expected to be an exact copy of another, say, result of data migration.
+One is expected to be an exact copy of another, say, as a result of data migration.
 How much pairs of records do I need to check to reach desired level of confidence that datasets match?
 
 ## Variables
 
 N - Dataset size\
 C - Confidence\
-b - expected number of errors ('bad' record)\
+b - maximum theoretical number of 'escaped' (corrupted records)\
 p = b/N - error rate (probability the record is corrupted)\
-S - sample size
+S - sample size - **that's the value we want to calculate**
 
 ## Evaluations
 
 We pick a random pair.The probability that it is correct is:
 
-$$(1-P)$$
+$$(1-p)$$
 
 We pick S random pairs. The probability (confidence level C) that they all correct is:
 
 $$C = (1-p)^S ≈ e^{-pS}$$
 
-$$=> S = F(C,P) = \frac{-ln(1-C)}{P}$$
+$$=> S = F(C,p) = \frac{-ln(1-C)}{p}$$
 
 $$<=>$$
 
