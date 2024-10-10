@@ -16,9 +16,10 @@ S - sample size
 
 ## Evaluations
 
-We pick a random pair.The probability that it is correct is:
+We pick a random pair.The probability that it is correct is:\
 $$(1-P)$$
-We pick S random pairs. The probability (confidence level C) that they all correct is:
+
+We pick S random pairs. The probability (confidence level C) that they all correct is:\
 $$C = (1-p)^S ≈ e^{-pS}$$
 
 $$=> S = F(C,P) = \frac{-ln(1-C)}{P}$$
