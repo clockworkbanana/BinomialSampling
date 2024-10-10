@@ -16,7 +16,7 @@ S - sample size - **that's the value we want to calculate**
 
 ## Evaluations
 
-We pick a random pair.The probability that it is correct is:
+We pick a random pair. The probability that it is correct is:
 
 $$(1-p)$$
 
